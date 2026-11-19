@@ -1,4 +1,4 @@
-# IAE_dev — P1 REQ·SWU 구현·P2 수용 계획 v1.0
+# IAE_dev — P1 REQ·SWU 구현·P2 수용 계획 v1.1
 
 > 2026-11-19 KST · **IAE_dev 신규 프로그램 전용 계획/설계 기준선**. 상위: [IAE_dev 통합 최종설계](IAE_DEV_FINAL_BLUEPRINT_V1_20261119.md).  
 > **현재:** 전용 공개 repo·P0 브랜치·초기 큐 생성 완료 / 실제 앱 소스 코드 미생성, 아래 모든 ID는 계획 수용조건. 구현·검증 **NOT_RUN**, 공식률 **UNASSESSED**, 출시 HOLD. 문서 28 REQ/22 SWU/9 P2 게이트는 **타 제품 분모에 합산하거나 완료로 인정하지 않음**. 개발 repo 출범 시 동일 ID·기능 범위·계약을 이식하고 SHA·실제 코드 증거로 상태 재산정.  
@@ -148,3 +148,21 @@ flowchart TD
 4. 실패 초기 2회→`ISOLATED_REDESIGN_PENDING`, 대안 2회→`SOLMAX_BATCH_PENDING`. 고위험 신뢰 과제는 코드와 원인 검토 후 즉시 전문 지원 요청 가능. Sol Max 실제 모델 가용성 미확인 시 `MODEL_UNVERIFIED`; Code/Work 실행 표면 구분.
 5. 보고: 신규 완료 IAE SWU/총계, P1 source 후보 vs P2 게이트/독립감사/GO, 작업 정확 SHA/파일, local PASS/FAIL/SKIP/NOT_RUN, 격리/승인·다음 READY, 기록 기준 KST. 기존 MLA/FFAX/AXZERO/REQ 숫자와 합쳐 전체 완료 %를 내지 않는다.
 6. 이 문서 커밋만으로 **소스·모델·테스트·배포·사용자 OS·외부 연동을 실행한 것이 아니다**. 새 repo 생성, 유료/외부 전송/원본·권한·main·Production·실사용 승인은 별도 처리한다.
+
+
+## 7. 2026-11-20 Flash/Hydrogen 수용조건 세분화 (분모 28/22/9 불변)
+
+[외부 AI 상세 정책](../EXTERNAL_AI_ROUTING_V1_20261120.md)은 IAE-REQ-05/09/10/17/26/27/28에 귀속한다. **새 SWU·P2 게이트를 가짜 추가하거나 완성률을 소급하지 않는다.**
+
+| 기존 작업 ID | 추가 기능·검증 조건 |
+|---|---|
+| IAE-SWU-006 | provider capability/free-tier/RPM·TPM·RPD와 Gemini 3.5 Flash의 3.6 Flash 이관, 모델 실제 ID·버전 불일치·기본 OFF |
+| IAE-SWU-007 | MLA 권한/F18 요청·응답 계약: 모델은 UNTRUSTED_PROPOSAL, 별도 승인 없는 외부 송신·실행 차단 |
+| IAE-SWU-018 | 비밀·private/customer data egress 차단, per-call 승인, 401/403/429/유료 전환/OOD fail-closed, Flash 에러시 Hydrogen 자동 전환 금지 |
+| IAE-SWU-019 | Hydrogen rolling24h 20회 제한·긴급예약 4·동시1/작업당1, 원자 예약/중복요청/전송불명 UNKNOWN_CONSUMED/재시작 복구·비용 원장 |
+| IAE-SWU-020 | Qwen·Flash·Hydrogen 실제 모델 ID/승인·무료 tier/쿼터 검증/Used·Reserved·Remaining/429·차단 상태 UI |
+| IAE-P2-05 | 비밀 유출·위조 승인·계정 무료 미확인·20번째/21번째 경계·예약 4·모델명 이동·HTTP 401/403/429/503, 차단 결과 |
+| IAE-P2-06 | SQLite 원자 quota reservation·동일 request_id·중복실행·전원손실·다중 프로젝트 소진량·불확실한 전송 회계·복구 |
+| IAE-P2-09 | provider 전부 OFF 기본 E2E, Flash 정상/429 mock·Hydrogen 특별 승인/자동승격 금지 mock, API 라이브 NOT_RUN 구분 |
+
+모든 외부 API는 `external_enabled=false, max_spend_usd=0` 기본값에서 시작한다. 사용자 계정 무료 등급·RPD/RPM/TPM 및 비민감 입력 전송의 **구체적 GO 없으면 live call 금지**. 타 제품의 F18·Owner·원본/CI/권한 유지. 본 설계 수정으로 P1/P2 수용 증가 0.
