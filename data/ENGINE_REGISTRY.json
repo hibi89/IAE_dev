@@ -133,6 +133,33 @@
       "observed_sha": null,
       "adapter": "tests",
       "notes": "P2 9 gates locked, owner Windows and independent audits NOT_RUN"
+    },
+    {
+      "key": "flash_external",
+      "name": "Gemini Flash general external assistant (3.5 legacy role)",
+      "role": "OPTIONAL_GENERAL_EXTERNAL_ADVISOR",
+      "mandatory": false,
+      "repo": null,
+      "branch": null,
+      "observed_sha": null,
+      "adapter": "adapters/external_ai",
+      "model_id": "gemini-3.6-flash",
+      "status": "DISABLED_ACCOUNT_UNVERIFIED",
+      "notes": "3.5 deprecated; effective model 3.6 to be verified, free tier and owner approval required"
+    },
+    {
+      "key": "hydrogen_external",
+      "name": "Gemini 4 Hydrogen",
+      "role": "OPTIONAL_CRITICAL_EXTERNAL_ADVISOR",
+      "mandatory": false,
+      "repo": null,
+      "branch": null,
+      "observed_sha": null,
+      "adapter": "adapters/external_ai",
+      "model_id": "gemini-4-hydrogen",
+      "status": "DISABLED_ACCOUNT_UNVERIFIED",
+      "notes": "user local cap rolling24h20; reserved4; per-task1; no-auto-retry; never auto on Flash 429"
     }
-  ]
+  ],
+  "revision_kst": "2026-11-20"
 }
