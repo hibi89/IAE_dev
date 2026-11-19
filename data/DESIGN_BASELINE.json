@@ -28,5 +28,13 @@
   "official_rate": "UNASSESSED",
   "audit": "NOT_RUN",
   "release": "HOLD",
-  "notes": "External engine observed SHAs are snapshots, not installed/built/verified adapters; refresh before work."
+  "notes": "External engine observed SHAs are snapshots, not installed/built/verified adapters; refresh before work.",
+  "revision_kst": "2026-11-20",
+  "external_ai_policy_ref": "docs/EXTERNAL_AI_ROUTING_V1_20261120.md",
+  "external_api_status": "NOT_RUN",
+  "flash_account_quota_status": "ACCOUNT_UNVERIFIED",
+  "hydrogen_account_quota_status": "ACCOUNT_UNVERIFIED",
+  "product_repo_exists": true,
+  "actual_implementation_swu": "0/22",
+  "actual_verification_gates": "0/9"
 }
