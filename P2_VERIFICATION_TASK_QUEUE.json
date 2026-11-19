@@ -65,25 +65,29 @@
       "gate_id": "IAE-P2-05",
       "scope": "보안·F18·자료권한",
       "acceptance": [
-        "외부송신/비밀/권한/symlink/TOCTOU/CSRF/loopback/악성 인풋; 실 실행 권한은 별도"
+        "외부송신/비밀/권한/symlink/TOCTOU/CSRF/loopback/악성 인풋; 실 실행 권한은 별도",
+        "External AI security: egress OFF, private/customer data, free tier and model-id gating, 20th/21st call, 4 reserved slots, forged approval, 401/403/429/503, Flash-to-Hydrogen non-escalation."
       ],
       "status": "LOCKED_P2",
       "evidence_sha": null,
       "blockers": [
         "P1 source candidate 22/22 and High exact-SHA acceptance not established"
-      ]
+      ],
+      "external_ai_policy_ref": "docs/EXTERNAL_AI_ROUTING_V1_20261120.md"
     },
     {
       "gate_id": "IAE-P2-06",
       "scope": "SQLite/중단/복구/복제",
       "acceptance": [
-        "crash/restart/WAL/rollback/동일 request/서로 다른 ref·원본 데이터 미변경"
+        "crash/restart/WAL/rollback/동일 request/서로 다른 ref·원본 데이터 미변경",
+        "SQLite WAN-exit ambiguous outcome UNKNOWN_CONSUMED, multi-process project-shared quota atomic reservation, 24h rolling window, idempotent attempts and crash/restore."
       ],
       "status": "LOCKED_P2",
       "evidence_sha": null,
       "blockers": [
         "P1 source candidate 22/22 and High exact-SHA acceptance not established"
-      ]
+      ],
+      "external_ai_policy_ref": "docs/EXTERNAL_AI_ROUTING_V1_20261120.md"
     },
     {
       "gate_id": "IAE-P2-07",
@@ -113,13 +117,16 @@
       "gate_id": "IAE-P2-09",
       "scope": "선택엔진 OFF/ON·운영 E2E",
       "acceptance": [
-        "AXZERO/EAI/AXNODE OFF에서도 기본 경로 PASS, 지원 가능 버전은 권한 하에서만 검증, 해총 관측·정확 SHA/가용성 및 장애 전파"
+        "AXZERO/EAI/AXNODE OFF에서도 기본 경로 PASS, 지원 가능 버전은 권한 하에서만 검증, 해총 관측·정확 SHA/가용성 및 장애 전파",
+        "Provider OFF baseline, Flash 429 mock, Hydrogen exceptional case-only mock, quota/approval/status UI and exact response model/version; live API not inferred from mocks."
       ],
       "status": "LOCKED_P2",
       "evidence_sha": null,
       "blockers": [
         "P1 source candidate 22/22 and High exact-SHA acceptance not established"
-      ]
+      ],
+      "external_ai_policy_ref": "docs/EXTERNAL_AI_ROUTING_V1_20261120.md"
     }
-  ]
+  ],
+  "revision_kst": "2026-11-20"
 }
