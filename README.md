@@ -48,3 +48,8 @@
 - 사전 승인 없는 main·Production·도메인/환경변수·유료·외부 원본 송신·권한/보호서비스 변경/고객 DB 변조/상용화 불가.
 - 공개 GitHub에 토큰, 개인 파일, 고객 원본, 모델 가중치, SQLite/로그/백업을 업로드하지 않는다.
 - GitHub SHA·테스트 PASS·Windows 실기기 PASS·독립 감사·사용자 GO는 **다른 증거**다.
+
+## 외부 AI 라우팅 (2026-11-20 정책)
+**Qwen 로컬·검증된 AXZERO 우선 → Flash 일반 외부 지원 → Hydrogen 특별 난제만.** 사용자가 원한 3.5 Flash 역할을 보존하되 Google 공식 2026-10-08 deprecated 안내에 따라 `gemini-3.6-flash` API 후보를 **계정 확인 후** 사용한다. Hydrogen은 **로컬 rolling24h 20회 상한, 4회 긴급 예약**이며 provider 공식 한도가 아니다. 둘 다 **기본 OFF**이고 무료 계정/쿼터·별도 데이터 전송 승인이 필요하다.
+- [전체 외부 AI 설계·한도·안전](docs/EXTERNAL_AI_ROUTING_V1_20261120.md)
+- [기계 판독 예산 정책](data/EXTERNAL_AI_ROUTING_POLICY_V1.json)
