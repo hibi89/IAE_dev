@@ -190,6 +190,6 @@ IAE_dev 실행→프로젝트 한 개 선택→원본 repo/branch/HEAD·확정�
 ## 13. 정확한 현재 상태와 다음 작업
 
 - **원격 해총:** `hibi89/hackathon-command-center-2026@kmong-productization`. 기존 목표 문서는 2026-11-19 `TARGET_ONLY`로 남겨 역사 보존; 본 문서는 사용자가 확정 요청한 **IAE_dev 통합 P0 설계 정본**이다.
-- **IAE_dev 전용 소스 repo/코드/EXE는 미생성**; 등록/배포/실기기/성능 검증은 `NOT_RUN`. 공식 IAE_dev P1/P2 진척 **UNASSESSED**. 신규 SWU/REQ는 [실행계획](IAE_DEV_IMPLEMENTATION_AND_ACCEPTANCE_V1_20261119.md)에만 명시; 원본 MLA/FFAX/AXZERO/REQ 분모와 합치지 않는다.
-- **최초 실제 개발 준비:** 별도 사용자 개발 지시로 전용 공개 repo 또는 승인된 위치와 작업 브랜치를 정하고, `AGENTS.md`, `HANDOFF.md`, `STATUS.md`, REQ·SWU 큐를 이 설계로 원자적 기준선화→GitHub HEAD 고정→IAE-dev 첫 READY 수직 코드 구현.
+- **IAE_dev 공개 저장소 `hibi89/IAE_dev`와 P0·개발·통합·검증·기능별 브랜치는 생성 완료, 실제 앱 소스 코드/EXE는 미구현**; 등록/배포/실기기/성능 검증은 `NOT_RUN`. 공식 IAE_dev P1/P2 진척 **UNASSESSED**. 신규 SWU/REQ는 [실행계획](IAE_DEV_IMPLEMENTATION_AND_ACCEPTANCE_V1_20261119.md)에만 명시; 원본 MLA/FFAX/AXZERO/REQ 분모와 합치지 않는다.
+- **최초 실제 개발 준비:** 사용자 지시에 따라 `hibi89/IAE_dev` 공개 repo 및 `design/iae-dev-final-v1`, `dev/iae-dev-p1-20261119`, 통합/검증/기능 브랜치를 생성하고 `AGENTS.md`·`HANDOFF.md`·`STATUS.md`·REQ·P1/P2 JSON 큐를 기준선화했다. 다음 단계는 최신 `dev` HEAD·안전·의존성을 다시 확인한 뒤 첫 READY 수직 코드 구현이다.
 - **현행 임무 보존:** 해총 단독 `ㄱ`은 기존 GitHub App 모니터링·자동화 작업이다. 이 문서 등록만으로 그 임무, 다른 제품의 코딩·안전·P2 상태, main/Production·외부 통신·유료/고객 원본 승인 범위를 바꾸지 않는다.
