@@ -4,6 +4,15 @@
 
 IAE 전체 비전의 첫 번째 생태계인 **IAE_dev**는 단일 Windows 앱/대시보드에서 MLA·FFAX·REQ Evidence Auditor·GitHub Actions와 선택형 AXZERO·EAI·AXNODE, 디자인 레퍼런스 라이브러리를 통합하는 개발 워크스테이션이다. 원본 엔진은 별도 저장소로 유지한다.
 
+## IAE_dev 저장소 내부 정본
+
+- [설계 브랜치 전체 파일](https://github.com/hibi89/IAE_dev/tree/design/iae-dev-final-v1)
+- [IAE_dev 최종설계 v1.0](https://github.com/hibi89/IAE_dev/blob/design/iae-dev-final-v1/docs/strategy/IAE_DEV_FINAL_BLUEPRINT_V1_20261119.md)
+- [28 REQ · 22 SWU · 9 P2 수용계획](https://github.com/hibi89/IAE_dev/blob/design/iae-dev-final-v1/docs/strategy/IAE_DEV_IMPLEMENTATION_AND_ACCEPTANCE_V1_20261119.md)
+- [전체 엔진 구성 목록](https://github.com/hibi89/IAE_dev/blob/design/iae-dev-final-v1/docs/ENGINE_CATALOG.md)
+- [브랜치 구조 및 책임](https://github.com/hibi89/IAE_dev/blob/design/iae-dev-final-v1/docs/BRANCH_STRATEGY.md)
+- [작업자 AGENTS.md](https://github.com/hibi89/IAE_dev/blob/design/iae-dev-final-v1/AGENTS.md) / [HANDOFF.md](https://github.com/hibi89/IAE_dev/blob/design/iae-dev-final-v1/HANDOFF.md)
+
 ## 먼저 확인할 설계 정본
 
 - [해총 IAE_dev P0 통합 최종설계](https://github.com/hibi89/hackathon-command-center-2026/blob/kmong-productization/docs/strategy/IAE_DEV_FINAL_BLUEPRINT_V1_20261119.md)
