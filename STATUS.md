@@ -19,3 +19,8 @@
 ## 변경 안전
 - 원본 제품/해총 운영·main·Production·권한·고객 자료·비밀·외부 비용·상용 배포 변경 없음.
 - 2026-11-30 목표는 일정 희망. 실제 성공/속도·모델 절감 효과 UNMEASURED.
+
+## 2026-11-20 — 외부 AI 설계 v1.1 정본 반영
+- 로컬 Qwen/검증된 AXZERO 우선 → Gemini Flash 일반 외부 자문(사용자 3.5 Flash 선호·공식 3.6 Flash API 이관) → Gemini 4 Hydrogen **특수 고난도만**. 모든 외부 provider **OFF**, 실제 Google 계정·무료/모델/쿼터 ACCOUNT_UNVERIFIED.
+- Hydrogen 사용자 지정 IAE_dev 자체 **rolling24h ≤20 요청**, 긴급 4건 예약, 1건/작업·동시1·자동재시도0. Flash 429/403 자동 Hydrogen 승격 금지. Google 공급자·앱 사용량 전체를 알 수 있다고 주장하지 않음.
+- 설계: `docs/EXTERNAL_AI_ROUTING_V1_20261120.md`, 정책: `data/EXTERNAL_AI_ROUTING_POLICY_V1.json`; 기존 REQ 28/P1 22/P2 9 분모와 상태 그대로. IAE_dev P1 0/22, P2 0/9 LOCKED, 공식률 UNASSESSED, API·실계정·Windows·독립감사 NOT_RUN, RELEASE HOLD.
