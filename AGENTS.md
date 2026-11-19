@@ -26,3 +26,10 @@
 - 각 SWU 완료 기준: 실제 사용자 호출→기능→검증 가능 결과, 정확 source SHA + 실행한 syntax/type/smoke 결과. P1/P2/감사/GO 별도 원장 갱신. 단순 문서·mock·테스트 수 증가 완료 금지.
 - 모든 커밋 전 branch/head 다시 확인하고 동일 ref 동시 쓰기 금지. 큰 변경이 끝나면 STATUS/HANDOFF 목표·완료·검증·차단·다음 READY·KST·SHA 갱신.
 - 현 시점은 **P0 설계/분기 생성만**; 22개 P1 소스 작업 전부 계획, P2 9개 전부 LOCKED. 설계 문서·브랜치 생성으로 구현률 상승 금지.
+
+## 4. 2026-11-20 외부 AI 라우팅 절대 정책
+- 현행 [외부 AI 라우팅 설계](docs/EXTERNAL_AI_ROUTING_V1_20261120.md)와 [기계 정책](data/EXTERNAL_AI_ROUTING_POLICY_V1.json) 준수. Qwen/검증된 AXZERO 로컬 우선, Gemini Flash 일반 외부 지원, Gemini Hydrogen 특별 난제만.
+- 3.5 Flash 폐기·3.6 Flash API 자동 라우팅을 공식 문서 기준으로 반영하고 실제 계정 모델/무료 tier/RPM/TPM/RPD 확인 전 Flash OFF.
+- Hydrogen은 **내부 rolling24h 20 요청 상한/긴급 4건 예약**, 작업당1/동시1/자동재시도0, Flash 429 자동대체 금지. 다른 프로그램/기기/Google 앱 사용량은 로컬에서 추정하지 않음.
+- 외부 provider 기본 OFF, 무료 자격·안전한 공개/합성 데이터 분류와 건별 Owner 승인이 없는 egress 금지. $0 원칙, 키·고객/비공개 원본 유출 금지. 모델 반환은 미신뢰 코드 제안, MLA Owner/F18 독립 보호·검증 우회 절대 금지.
+- 본 정책은 새 IAE-dev REQ/SWU/P2 분모를 바꾸지 않으며 외부 API 실제 호출·유료/원본/권한 GO가 아니다.
