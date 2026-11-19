@@ -27,3 +27,10 @@
 2. 제한된 호출 시간/자원/재시도, correlation request_id/attempt_id, idempotent receipt
 3. timeout/중단/정책 불일치/권한 없음/stale SHA/malicious input/OOD이면 typed HOLD, 관측 근거 보존
 4. 한 모듈 장애는 다른 독립 READY 진행 허용. 단, REQ/Actions 미연결 때 실제 P2 PASS로 조작 금지.
+
+## 2026-11-20 ProviderRequestV1 / ProviderResultV1 계약
+**ProviderRequestV1:** `request_id, project_id, source_sha, provider_role, requested_model_id, data_class, rights_clearance, sanitized_payload_sha, owner_approval_id, free_tier_snapshot, quota_snapshot, max_cost_usd, deadline_ms, attempt_id`.
+**ProviderResultV1:** `request_id, effective_response_model_id, receipt_sha, status, reason_code, usage_tokens, observed_cost_usd, latency_ms, consumed_quota_state, untrusted_candidate_ref`.
+- External provider registry는 OFF/free-account-unverified/egress forbidden일 때 호출 거부, Flash의 deprecated alias를 3.6 API 실모델 검증 뒤 핀, Hydrogen rolling24h 20/긴급4/작업1·동시1·재시도0 원자 예약.
+- 429/timeout/오류에 Hydrogen 자동 escalation 금지; 불명확한 전송은 UNKNOWN_CONSUMED. 모델 답변은 UNTRUSTED_PROPOSAL이며 MLA F18/Owner를 우회하지 않음.
+- [정본](EXTERNAL_AI_ROUTING_V1_20261120.md) · [기계 정책](../data/EXTERNAL_AI_ROUTING_POLICY_V1.json)
