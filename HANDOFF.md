@@ -10,3 +10,8 @@
 8. **안전/원본:** 사용자 GO 없는 remote write·main·Production·보호 권한·고객 원본·결제/상용화 불가. 공개 GitHub secrets/DB/로그 업로드 금지. 기존 GitHub App 해총 단독 `ㄱ` 임무 불변.
 9. **검증:** 본 설계 출처·파일 자체 GitHub 원격 기록만; 실제 Windows/브라우저/코드/외부 모델 테스트와 독립 감사 NOT_RUN.
 10. **다음 실행:** IAE_dev 전용 새 작업 채팅을 잠그고 `ㄱ` → 최신 HEAD/정본/큐 확인 → 1~6 READY 실제 수직 기능 구현·국소 검사·GitHub 커밋 → STATUS/HANDOFF 갱신. P2/독립 감사/GO는 별도.
+
+## 2026-11-20 — Flash/Hydrogen P0 설계 추가 인계
+- 경로: 검증된 AXZERO/MLA Qwen 로컬 우선 → Flash 일반 외부 자문 → Hydrogen 특수 난제만. **Google 공식 3.5 Flash deprecated→3.6 Flash API**, 실제 무료 tier/계정 한도/유효 모델 ACCOUNT_UNVERIFIED.
+- Hydrogen 사용자 자체 운영 예산: rolling24h 최대20, 긴급용 4 예약, 작업당 1회, 동시1회, 자동재시도 0. Flash 429로 자동 Hydrogen 호출 금지. 외부 전송·API·과금/키·계정 설정 NOT_RUN/OFF.
+- [모델 상세설계](docs/EXTERNAL_AI_ROUTING_V1_20261120.md)와 [계약 JSON](data/EXTERNAL_AI_ROUTING_POLICY_V1.json), IAE-SWU-006/007/018/019/020 및 P2-05/06/09에 귀속. IAE-dev 실제 코드 P1 0/22, P2 0/9 LOCKED. 본 반영은 docs only, 해총 고유 임무·원본 제품 정본 변경 없음.
