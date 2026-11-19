@@ -29,3 +29,10 @@
 - **FFAX만** 레퍼런스 scene graph·렌더·React 생성, Design Intelligence는 자료 관리/FFAX 입력 패키지만.
 - **AXZERO만** 경험 컴파일·무AI 모듈 후보. IAE_dev는 AXZERO bridge만, 사용자 경험상 MLA 작업 화면에 내부화하되 소스는 독립 보존.
 - **해총** GitHub App→HMAC→Vercel→Actions 운영과 장애 알람은 기존 것 재사용. IAE_dev는 상태 조회·대조만.
+
+## 3. 외부 AI 제공자 2종 — 2026-11-20 추가
+| 제공자 | 역할 | 현재 상태 |
+|---|---|---|
+| **Gemini Flash** | 일반 외부 자문. 기존 3.5 Flash 사용자 선호를 공식 `gemini-3.6-flash` API 모델 후보로 전환 | ACCOUNT_UNVERIFIED / OFF / 무료 quota 미측정 |
+| **Gemini 4 Hydrogen** | 임계 설계 모순·보안 병목·2+2 재설계 특수 자문만 | 내부 rolling24h 20, 긴급4, 작업당1, 자동재시도0 / OFF |
+외부 API·고객/비공개 원본 전송 금지, 별도 명시적 owner 승인 전 실 호출 없음. [전체 계약](EXTERNAL_AI_ROUTING_V1_20261120.md).
