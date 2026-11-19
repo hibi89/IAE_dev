@@ -32,3 +32,6 @@
 | IAE-REQ-26 | 자원/KPI | CPU/RAM/VRAM·latency·actual model calls/토큰/비용·오류, 간접·가상 수치 제외; 저사양 동시 실행 한도 |
 | IAE-REQ-27 | 보안/권한 | 기본 오프라인·외부 전송/설치/임의 생성코드 실행·main/Production/HKLM/SCM/ACL/CNG·결제는 별도 GO; fail-closed |
 | IAE-REQ-28 | 호환·권리 | 기존 엔진 원본 보존·핀된 versioned adapters·라이선스/asset 권리; AXNODE 등 미래 모듈은 optional |
+
+## 2026-11-20 외부 AI 정책의 기존 REQ 수용 확장
+IAE-REQ-05(건별 원격 전송 승인), 09(MLA Owner/F18), 10(Flash/Hydrogen 실제 model ID·무료 계정/쿼터), 17(독립 증거 구분), 26(rolling24h/호출량/비용 원장), 27(민감 원본 egress 차단), 28(모델 버전 호환)에 [외부 AI 라우팅 정책](docs/EXTERNAL_AI_ROUTING_V1_20261120.md)을 적용. **요구사항 총 28개 불변**, 문서 업데이트로 구현 PASS 주장 금지.
