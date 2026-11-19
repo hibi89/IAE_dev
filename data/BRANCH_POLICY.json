@@ -9,10 +9,12 @@
   "p2": "verify/iae-dev-p2-20261119",
   "features": [
     "feature/iae-design-intelligence-20261119",
-    "feature/iae-axzero-adapter-20261119"
+    "feature/iae-axzero-adapter-20261119",
+    "feature/iae-provider-router-20261120"
   ],
   "branch_creations_do_not_imply_code": true,
   "main_merge_requires_owner_go": true,
   "same_ref_concurrent_writes_forbidden": true,
-  "production_requires_owner_go": true
+  "production_requires_owner_go": true,
+  "revision_kst": "2026-11-20"
 }
