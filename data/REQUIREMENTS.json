@@ -35,7 +35,8 @@
       "category": "승인",
       "acceptance": "작업 범위/허용 파일/위험·효과·예산 preview, 별도 owner GO 없는 외부송신/권한/원본/remote write 차단",
       "status": "PLANNED_NOT_IMPLEMENTED",
-      "evidence_sha": null
+      "evidence_sha": null,
+      "external_ai_policy_ref": "docs/EXTERNAL_AI_ROUTING_V1_20261120.md"
     },
     {
       "req_id": "IAE-REQ-06",
@@ -63,14 +64,16 @@
       "category": "MLA",
       "acceptance": "실제 MLA Controller 호환 핸드셰이크/읽기 상태; 보호 Owner·F18/Zero-VM 경계 우회 불가",
       "status": "PLANNED_NOT_IMPLEMENTED",
-      "evidence_sha": null
+      "evidence_sha": null,
+      "external_ai_policy_ref": "docs/EXTERNAL_AI_ROUTING_V1_20261120.md"
     },
     {
       "req_id": "IAE-REQ-10",
       "category": "엔진 등록",
       "acceptance": "버전·capability·CLI/API·프로세스/타임아웃·자원·OFF 스위치; 미설치·stale·invalid 응답은 타입화 HOLD",
       "status": "PLANNED_NOT_IMPLEMENTED",
-      "evidence_sha": null
+      "evidence_sha": null,
+      "external_ai_policy_ref": "docs/EXTERNAL_AI_ROUTING_V1_20261120.md"
     },
     {
       "req_id": "IAE-REQ-11",
@@ -119,7 +122,8 @@
       "category": "수용 단계",
       "acceptance": "P1 코드 후보와 P2 실제 PASS, 독립감사, Owner GO, 게시 URL·일자 분리; 분모/가중치 없는 완료율 `UNASSESSED`",
       "status": "PLANNED_NOT_IMPLEMENTED",
-      "evidence_sha": null
+      "evidence_sha": null,
+      "external_ai_policy_ref": "docs/EXTERNAL_AI_ROUTING_V1_20261120.md"
     },
     {
       "req_id": "IAE-REQ-18",
@@ -182,21 +186,25 @@
       "category": "자원/KPI",
       "acceptance": "CPU/RAM/VRAM·latency·actual model calls/토큰/비용·오류, 간접·가상 수치 제외; 저사양 동시 실행 한도",
       "status": "PLANNED_NOT_IMPLEMENTED",
-      "evidence_sha": null
+      "evidence_sha": null,
+      "external_ai_policy_ref": "docs/EXTERNAL_AI_ROUTING_V1_20261120.md"
     },
     {
       "req_id": "IAE-REQ-27",
       "category": "보안/권한",
       "acceptance": "기본 오프라인·외부 전송/설치/임의 생성코드 실행·main/Production/HKLM/SCM/ACL/CNG·결제는 별도 GO; fail-closed",
       "status": "PLANNED_NOT_IMPLEMENTED",
-      "evidence_sha": null
+      "evidence_sha": null,
+      "external_ai_policy_ref": "docs/EXTERNAL_AI_ROUTING_V1_20261120.md"
     },
     {
       "req_id": "IAE-REQ-28",
       "category": "호환·권리",
       "acceptance": "기존 엔진 원본 보존·핀된 versioned adapters·라이선스/asset 권리; AXNODE 등 미래 모듈은 optional",
       "status": "PLANNED_NOT_IMPLEMENTED",
-      "evidence_sha": null
+      "evidence_sha": null,
+      "external_ai_policy_ref": "docs/EXTERNAL_AI_ROUTING_V1_20261120.md"
     }
-  ]
+  ],
+  "revision_kst": "2026-11-20"
 }
