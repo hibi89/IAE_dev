@@ -20,3 +20,13 @@
 | 관측 | 해총 GitHub App/HMAC/Webhook/Vercel/Actions | 기존 운영 재사용 | IAE_dev는 조회, 기존 운영 구성 변경 없음 |
 
 **필수 외부 유료 API 0**, **VM/Docker/WSL2 강제 0**. 실제 가격·시간·GPU/RAM·F95·무AI 재사용률은 `UNMEASURED`.
+
+## 2026-11-20 외부 모델·라우터 우선 기술
+| 계층 | 모델·기술 | 승인·실행 |
+|---|---|---|
+| 로컬 기본 | Ollama/Qwen3:4B·MLA·검증된 AXZERO | 로컬 무료 우선, AXZERO 실제 구현 전 OFF |
+| 일반 외부 | Gemini 3.5 Flash 선호 **역할**, 실제 API 후보 `gemini-3.6-flash` | 공식 3.5→3.6 이관·계정 무료 quota 미검증, OFF |
+| 특별 외부 | `gemini-4-hydrogen` | 사용자 내부 rolling24h ≤20, 예약4, 작업1/동시1/재시도0, OFF |
+| 통합 | `adapters/external_ai/**`, SQLite WAL quota reservation, per-call owner approval | P1 구현 예정, 실제 API NOT_RUN |
+| UI | 실 모델 ID·quota known/unknown·승인·비용·HOLD 표시 | P1 구현 예정 |
+[외부 AI 상세 정책](EXTERNAL_AI_ROUTING_V1_20261120.md)
