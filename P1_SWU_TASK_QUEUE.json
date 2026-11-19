@@ -154,10 +154,12 @@
       ],
       "allowed_paths": [
         "app/contracts/**",
-        "service/adapters/**"
+        "service/adapters/**",
+        "adapters/external_ai/**"
       ],
       "acceptance": [
-        "version/capability 확인, OFF/비호환/시간초과 HOLD"
+        "version/capability 확인, OFF/비호환/시간초과 HOLD",
+        "Provider capability/free-only API model 3.5 Flash legacy->3.6 Flash, verified quota/RPM/TPM/RPD, disabled and mismatch paths."
       ],
       "risk": "HIGH",
       "status": "PLANNED_NOT_READY",
@@ -166,7 +168,8 @@
       ],
       "evidence_sha": null,
       "attempts_initial": 0,
-      "attempts_after_redesign": 0
+      "attempts_after_redesign": 0,
+      "external_ai_policy_ref": "docs/EXTERNAL_AI_ROUTING_V1_20261120.md"
     },
     {
       "swu_id": "IAE-SWU-007",
@@ -179,10 +182,12 @@
         "IAE-SWU-006"
       ],
       "allowed_paths": [
-        "adapters/mla/**"
+        "adapters/mla/**",
+        "adapters/external_ai/**"
       ],
       "acceptance": [
-        "MLA 실제 상태·계약 caller; F18/Owner 차단을 UI까지 전파"
+        "MLA 실제 상태·계약 caller; F18/Owner 차단을 UI까지 전파",
+        "MLA Controller/Owner/F18 authoritative for any external-model proposal or egress; untrusted response cannot grant execution."
       ],
       "risk": "HIGH",
       "status": "PLANNED_NOT_READY",
@@ -191,7 +196,8 @@
       ],
       "evidence_sha": null,
       "attempts_initial": 0,
-      "attempts_after_redesign": 0
+      "attempts_after_redesign": 0,
+      "external_ai_policy_ref": "docs/EXTERNAL_AI_ROUTING_V1_20261120.md"
     },
     {
       "swu_id": "IAE-SWU-008",
@@ -462,10 +468,12 @@
       ],
       "allowed_paths": [
         "service/security/**",
-        "tests/security/**"
+        "tests/security/**",
+        "adapters/external_ai/**"
       ],
       "acceptance": [
-        "path/Host/Origin/CSRF/비밀·권한/원본 공격 fail-closed"
+        "path/Host/Origin/CSRF/비밀·권한/원본 공격 fail-closed",
+        "Per-request public/synthetic payload, secret/SSRF/approval/fee-policy/429 fail-closed, no Flash 429 to automatic Hydrogen."
       ],
       "risk": "HIGH",
       "status": "PLANNED_NOT_READY",
@@ -474,7 +482,8 @@
       ],
       "evidence_sha": null,
       "attempts_initial": 0,
-      "attempts_after_redesign": 0
+      "attempts_after_redesign": 0,
+      "external_ai_policy_ref": "docs/EXTERNAL_AI_ROUTING_V1_20261120.md"
     },
     {
       "swu_id": "IAE-SWU-019",
@@ -489,10 +498,12 @@
       ],
       "allowed_paths": [
         "service/storage/**",
-        "service/metrics/**"
+        "service/metrics/**",
+        "adapters/external_ai/**"
       ],
       "acceptance": [
-        "중단/재개/원자 복구·CPU/RAM·모델 호출 실측, 중복 없음"
+        "중단/재개/원자 복구·CPU/RAM·모델 호출 실측, 중복 없음",
+        "Atomic SQLite provider ledger/rolling24h Hydrogen <=20, 4 emergency reserve, one call/task, no automatic retries, UNKNOWN_CONSUMED, recovery."
       ],
       "risk": "MEDIUM",
       "status": "PLANNED_NOT_READY",
@@ -501,7 +512,8 @@
       ],
       "evidence_sha": null,
       "attempts_initial": 0,
-      "attempts_after_redesign": 0
+      "attempts_after_redesign": 0,
+      "external_ai_policy_ref": "docs/EXTERNAL_AI_ROUTING_V1_20261120.md"
     },
     {
       "swu_id": "IAE-SWU-020",
@@ -518,10 +530,12 @@
         "IAE-SWU-019"
       ],
       "allowed_paths": [
-        "app/ui/**"
+        "app/ui/**",
+        "app/ui/providers/**"
       ],
       "acceptance": [
-        "다중 페이지 실제 호출/차단·SHA·한국어/키보드 경로 연결"
+        "다중 페이지 실제 호출/차단·SHA·한국어/키보드 경로 연결",
+        "Show verified model IDs/Flash quota or unknown, Hydrogen used/reserved/remaining and Owner per-call authorization."
       ],
       "risk": "MEDIUM",
       "status": "PLANNED_NOT_READY",
@@ -530,7 +544,8 @@
       ],
       "evidence_sha": null,
       "attempts_initial": 0,
-      "attempts_after_redesign": 0
+      "attempts_after_redesign": 0,
+      "external_ai_policy_ref": "docs/EXTERNAL_AI_ROUTING_V1_20261120.md"
     },
     {
       "swu_id": "IAE-SWU-021",
@@ -615,5 +630,7 @@
       "attempts_initial": 0,
       "attempts_after_redesign": 0
     }
-  ]
+  ],
+  "revision_kst": "2026-11-20",
+  "external_ai_policy_status": "DESIGN_ONLY_DISABLED"
 }
