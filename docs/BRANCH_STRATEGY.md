@@ -15,3 +15,7 @@
 **브랜치 흐름:** `design` 기준선 → `dev` 개발, 비충돌 `feature/*` → 정확 SHA/계약 확인 후 `integration` → 안전 인수된 SHA에서 `verify` P2 → P3 독립 감사 → P4 High 인수 → 별도 사용자 GO 시에만 `main`.
 
 **다중 작업자 병렬**은 작업별 책임자·동일 출발 SHA·비충돌 allowed_paths·실제 총시간 이득/가용성이 검증될 경우에만 사용. 모델 한 명을 여러 병렬 작업자라고 주장하지 않는다. Force push/권한·브랜치 보호 임의 변경 금지.
+
+## 2026-11-20 외부 AI 라우팅 개발 격리 브랜치
+- `feature/iae-provider-router-20261120`: Flash 일반 외부 모델·Hydrogen 특별 지원의 versioned contract, 무료/계정한도·20회 중앙 ledger·per-call 승인 및 UI만 개발할 비충돌 후보 브랜치.
+- 현재 P0 설계 기준 SHA에서 분기하며 실제 작업 전 HEAD·권한·충돌 범위 확인. 소유 기존 SWU-006/007/018/019/020, P2-05/06/09. 모델 자체 실행/고객 자료 송신·과금 승인 아님.
