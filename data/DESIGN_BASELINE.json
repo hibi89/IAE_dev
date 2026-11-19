@@ -1,0 +1,32 @@
+{
+  "schema": "iae-dev-design-baseline-v1",
+  "captured_kst": "2026-11-19",
+  "source_repo": "hibi89/hackathon-command-center-2026",
+  "source_branch": "kmong-productization",
+  "source_head_sha": "313e1b6cdb5b0dfa2a11b323d347d84db08a1467",
+  "source_files": [
+    {
+      "path": "docs/strategy/IAE_DEV_FINAL_BLUEPRINT_V1_20261119.md",
+      "source_blob_sha": "74f79971d2ed7fb6bd111be791dfed5faff1bbbf"
+    },
+    {
+      "path": "docs/strategy/IAE_DEV_IMPLEMENTATION_AND_ACCEPTANCE_V1_20261119.md",
+      "source_blob_sha": "11237ce31d9856639e075804c37cb6d988ef5e50"
+    },
+    {
+      "path": "docs/strategy/IAE_DEV_FIRST_WORK_ECOSYSTEM_TARGET_20261119.md",
+      "source_blob_sha": "5944164dcadf5208504333b37e0bb1046dbaa960"
+    },
+    {
+      "path": "docs/strategy/FUTURE_DEVELOPMENT_WORKFLOW_TARGET_20261118.md",
+      "source_blob_sha": "dbd3aeb67b17d85ed079d7d5a9d3a222d1024ed0"
+    }
+  ],
+  "design_status": "DESIGN_LOCKED_NOT_IMPLEMENTED",
+  "implementation_count": "0/22",
+  "verification_count": "0/9",
+  "official_rate": "UNASSESSED",
+  "audit": "NOT_RUN",
+  "release": "HOLD",
+  "notes": "External engine observed SHAs are snapshots, not installed/built/verified adapters; refresh before work."
+}

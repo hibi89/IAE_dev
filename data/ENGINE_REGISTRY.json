@@ -1,0 +1,138 @@
+{
+  "schema": "iae-dev-engine-registry-v1",
+  "captured_kst": "2026-11-19",
+  "engines": [
+    {
+      "key": "mla",
+      "name": "My Local AI (MLA)",
+      "role": "PRIMARY_CONTROLLER",
+      "mandatory": true,
+      "repo": "hibi89/my_local_ai",
+      "branch": "dev/instant-implementation-v1",
+      "observed_sha": "a095acc09c24889eb61e804d7d957bd570d885f8",
+      "adapter": "adapters/mla",
+      "notes": "work queue, local Qwen, owner approvals, F18 trust, no bypass"
+    },
+    {
+      "key": "ffax",
+      "name": "Frontend Foundry AX",
+      "role": "FRONTEND_REFERENCE_IMPLEMENTER",
+      "mandatory": true,
+      "repo": "hibi89/frontend-foundry-ax",
+      "branch": "feature/ffax-reference-fidelity-20261118",
+      "observed_sha": "67e898b594064ffeb3fc629a81077a45394badc5",
+      "adapter": "adapters/ffax",
+      "notes": "reference scene analysis, React/CSS, actual browser capture; F95 goal not verified"
+    },
+    {
+      "key": "reqauditor",
+      "name": "REQ Evidence Auditor A",
+      "role": "STATIC_EVIDENCE_ANALYZER",
+      "mandatory": true,
+      "repo": "hibi89/REQ-Evidence-Auditor-A-",
+      "branch": "integration/reqea-p1-20261118",
+      "observed_sha": "c892dc961b2b7f342fce78730adaa20600771f3e",
+      "adapter": "adapters/req",
+      "notes": "REQ-to-code static candidates != executed tests/independent audit"
+    },
+    {
+      "key": "axzero",
+      "name": "AX ZERO",
+      "role": "OPTIONAL_EXPERIENCE_COMPILER",
+      "mandatory": false,
+      "repo": "hibi89/Freelancer",
+      "branch": "product/ax-zero-local",
+      "observed_sha": "3f55a831cb7f8ab85cd49bc3cee8470d0310d5ac",
+      "adapter": "adapters/axzero",
+      "notes": "design-only, 0/18 SWU; compiler proposal cannot approve MLA execution"
+    },
+    {
+      "key": "eai",
+      "name": "EAI",
+      "role": "OPTIONAL_NONAUTHORITATIVE_ADVISOR",
+      "mandatory": false,
+      "repo": "hibi89/EAI",
+      "branch": "feature/eai-v32-owner-rebuild-20261119",
+      "observed_sha": "58357a99b321cc21d2066af4c22baee764bba682",
+      "adapter": "adapters/eai",
+      "notes": "advisory only, independently OFF without core regression"
+    },
+    {
+      "key": "axnode",
+      "name": "AXNODE",
+      "role": "OPTIONAL_CAPABILITY_EXPORT",
+      "mandatory": false,
+      "repo": "hibi89/Freelancer",
+      "branch": "product/axnode-sector-runtime",
+      "observed_sha": "fa30a28aa61c166b519ddb2663c3620537767f4e",
+      "adapter": "adapters/axnode",
+      "notes": "optional serializer/export; never authority, no blocking core"
+    },
+    {
+      "key": "hub",
+      "name": "해총 Command Center",
+      "role": "OBSERVABILITY_READ_ONLY",
+      "mandatory": true,
+      "repo": "hibi89/hackathon-command-center-2026",
+      "branch": "kmong-productization",
+      "observed_sha": "313e1b6cdb5b0dfa2a11b323d347d84db08a1467",
+      "adapter": "adapters/haechong",
+      "notes": "GitHub App/HMAC/Vercel/Actions/ledger existing mission unchanged"
+    },
+    {
+      "key": "github",
+      "name": "GitHub/Actions",
+      "role": "SOURCE_AND_EXECUTED_CI",
+      "mandatory": true,
+      "repo": null,
+      "branch": null,
+      "observed_sha": null,
+      "adapter": "adapters/github",
+      "notes": "read SHA/CI; Git remote write needs separate scoped approval"
+    },
+    {
+      "key": "design",
+      "name": "IAE Design Intelligence",
+      "role": "INTERNAL_REFERENCE_LIBRARY",
+      "mandatory": true,
+      "repo": "hibi89/IAE_dev",
+      "branch": "feature/iae-design-intelligence-20261119",
+      "observed_sha": null,
+      "adapter": "design_library",
+      "notes": "planned only; rights, 16 lightweight thumbnails, FFAX selection package"
+    },
+    {
+      "key": "codeshield",
+      "name": "CodeShield + MLA F18",
+      "role": "TRUST_BOUNDARY",
+      "mandatory": true,
+      "repo": "hibi89/my_local_ai",
+      "branch": "dev/instant-implementation-v1",
+      "observed_sha": "a095acc09c24889eb61e804d7d957bd570d885f8",
+      "adapter": "adapters/mla",
+      "notes": "no direct script execution or forged receipts; outstanding native owner acceptance"
+    },
+    {
+      "key": "iaecore",
+      "name": "IAE_dev Host/Registry/UI",
+      "role": "INTEGRATED_LOCAL_WORKSPACE",
+      "mandatory": true,
+      "repo": "hibi89/IAE_dev",
+      "branch": "dev/iae-dev-p1-20261119",
+      "observed_sha": null,
+      "adapter": "service",
+      "notes": "to be implemented, 22 own P1 SWUs"
+    },
+    {
+      "key": "audit",
+      "name": "Independent P2/P3 verification",
+      "role": "SEPARATE_VERIFICATION",
+      "mandatory": true,
+      "repo": "hibi89/IAE_dev",
+      "branch": "verify/iae-dev-p2-20261119",
+      "observed_sha": null,
+      "adapter": "tests",
+      "notes": "P2 9 gates locked, owner Windows and independent audits NOT_RUN"
+    }
+  ]
+}

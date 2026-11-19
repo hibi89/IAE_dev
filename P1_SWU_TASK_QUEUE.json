@@ -1,0 +1,619 @@
+{
+  "schema": "iae-dev-p1-swu-v1",
+  "created_kst": "2026-11-19",
+  "repo": "hibi89/IAE_dev",
+  "design_branch": "design/iae-dev-final-v1",
+  "phase": "P1_IMPLEMENTATION",
+  "status": "NOT_STARTED",
+  "total_swu_count": 22,
+  "implemented_candidate_count": 0,
+  "total_req_count": 28,
+  "verified_req_count": 0,
+  "official_weighted_implementation_rate": "UNASSESSED",
+  "source_head_sha": null,
+  "requires_actual_code": true,
+  "tasks": [
+    {
+      "swu_id": "IAE-SWU-001",
+      "discipline": "C/U",
+      "req_ids": [
+        "IAE-REQ-01",
+        "IAE-REQ-23"
+      ],
+      "depends_on": [],
+      "allowed_paths": [
+        "app/ui/project/**",
+        "service/project/**"
+      ],
+      "acceptance": [
+        "선택한 프로젝트를 실제 상태로 로드, 미선택 명령 거부"
+      ],
+      "risk": "MEDIUM",
+      "status": "PLANNED_NOT_READY",
+      "blockers": [
+        "IAE_dev source branch baseline and code-ready dependency inspection"
+      ],
+      "evidence_sha": null,
+      "attempts_initial": 0,
+      "attempts_after_redesign": 0
+    },
+    {
+      "swu_id": "IAE-SWU-002",
+      "discipline": "C/S",
+      "req_ids": [
+        "IAE-REQ-02",
+        "IAE-REQ-03"
+      ],
+      "depends_on": [
+        "IAE-SWU-001"
+      ],
+      "allowed_paths": [
+        "service/project/**",
+        "adapters/github/**"
+      ],
+      "acceptance": [
+        "HEAD·최종설계·정책 SHA 비교, 이동/누락 HOLD"
+      ],
+      "risk": "HIGH",
+      "status": "PLANNED_NOT_READY",
+      "blockers": [
+        "IAE_dev source branch baseline and code-ready dependency inspection"
+      ],
+      "evidence_sha": null,
+      "attempts_initial": 0,
+      "attempts_after_redesign": 0
+    },
+    {
+      "swu_id": "IAE-SWU-003",
+      "discipline": "C/S/U",
+      "req_ids": [
+        "IAE-REQ-04",
+        "IAE-REQ-05"
+      ],
+      "depends_on": [
+        "IAE-SWU-001",
+        "IAE-SWU-002"
+      ],
+      "allowed_paths": [
+        "service/approval/**",
+        "app/ui/command/**"
+      ],
+      "acceptance": [
+        "프로젝트 전용 명령·승인 preview, 범위 밖 요청 거부"
+      ],
+      "risk": "HIGH",
+      "status": "PLANNED_NOT_READY",
+      "blockers": [
+        "IAE_dev source branch baseline and code-ready dependency inspection"
+      ],
+      "evidence_sha": null,
+      "attempts_initial": 0,
+      "attempts_after_redesign": 0
+    },
+    {
+      "swu_id": "IAE-SWU-004",
+      "discipline": "C",
+      "req_ids": [
+        "IAE-REQ-06",
+        "IAE-REQ-07"
+      ],
+      "depends_on": [
+        "IAE-SWU-002",
+        "IAE-SWU-003"
+      ],
+      "allowed_paths": [
+        "service/work/**"
+      ],
+      "acceptance": [
+        "DAG/CPAA/1~6 SWU, 2+2·중복·충돌 정상/오류 처리"
+      ],
+      "risk": "MEDIUM",
+      "status": "PLANNED_NOT_READY",
+      "blockers": [
+        "IAE_dev source branch baseline and code-ready dependency inspection"
+      ],
+      "evidence_sha": null,
+      "attempts_initial": 0,
+      "attempts_after_redesign": 0
+    },
+    {
+      "swu_id": "IAE-SWU-005",
+      "discipline": "D/S",
+      "req_ids": [
+        "IAE-REQ-08",
+        "IAE-REQ-17"
+      ],
+      "depends_on": [
+        "IAE-SWU-002"
+      ],
+      "allowed_paths": [
+        "service/evidence/**",
+        "service/storage/**"
+      ],
+      "acceptance": [
+        "정확 SHA 증거 분리·멱등 기록, 없는 PASS 생성 불가"
+      ],
+      "risk": "HIGH",
+      "status": "PLANNED_NOT_READY",
+      "blockers": [
+        "IAE_dev source branch baseline and code-ready dependency inspection"
+      ],
+      "evidence_sha": null,
+      "attempts_initial": 0,
+      "attempts_after_redesign": 0
+    },
+    {
+      "swu_id": "IAE-SWU-006",
+      "discipline": "I/S",
+      "req_ids": [
+        "IAE-REQ-10",
+        "IAE-REQ-28"
+      ],
+      "depends_on": [
+        "IAE-SWU-002"
+      ],
+      "allowed_paths": [
+        "app/contracts/**",
+        "service/adapters/**"
+      ],
+      "acceptance": [
+        "version/capability 확인, OFF/비호환/시간초과 HOLD"
+      ],
+      "risk": "HIGH",
+      "status": "PLANNED_NOT_READY",
+      "blockers": [
+        "IAE_dev source branch baseline and code-ready dependency inspection"
+      ],
+      "evidence_sha": null,
+      "attempts_initial": 0,
+      "attempts_after_redesign": 0
+    },
+    {
+      "swu_id": "IAE-SWU-007",
+      "discipline": "I/S",
+      "req_ids": [
+        "IAE-REQ-09"
+      ],
+      "depends_on": [
+        "IAE-SWU-004",
+        "IAE-SWU-006"
+      ],
+      "allowed_paths": [
+        "adapters/mla/**"
+      ],
+      "acceptance": [
+        "MLA 실제 상태·계약 caller; F18/Owner 차단을 UI까지 전파"
+      ],
+      "risk": "HIGH",
+      "status": "PLANNED_NOT_READY",
+      "blockers": [
+        "IAE_dev source branch baseline and code-ready dependency inspection"
+      ],
+      "evidence_sha": null,
+      "attempts_initial": 0,
+      "attempts_after_redesign": 0
+    },
+    {
+      "swu_id": "IAE-SWU-008",
+      "discipline": "I/S",
+      "req_ids": [
+        "IAE-REQ-11",
+        "IAE-REQ-19"
+      ],
+      "depends_on": [
+        "IAE-SWU-007"
+      ],
+      "allowed_paths": [
+        "adapters/mla/**",
+        "service/work/**"
+      ],
+      "acceptance": [
+        "허용된 후보 diff·source SHA·국소검사 수집, 무승인 remote 쓰기 금지"
+      ],
+      "risk": "HIGH",
+      "status": "PLANNED_NOT_READY",
+      "blockers": [
+        "IAE_dev source branch baseline and code-ready dependency inspection"
+      ],
+      "evidence_sha": null,
+      "attempts_initial": 0,
+      "attempts_after_redesign": 0
+    },
+    {
+      "swu_id": "IAE-SWU-009",
+      "discipline": "I/D",
+      "req_ids": [
+        "IAE-REQ-15"
+      ],
+      "depends_on": [
+        "IAE-SWU-005",
+        "IAE-SWU-006"
+      ],
+      "allowed_paths": [
+        "adapters/req/**"
+      ],
+      "acceptance": [
+        "A 제품 정적 근거 읽기, 코드 후보와 독립 테스트 차이를 기록"
+      ],
+      "risk": "MEDIUM",
+      "status": "PLANNED_NOT_READY",
+      "blockers": [
+        "IAE_dev source branch baseline and code-ready dependency inspection"
+      ],
+      "evidence_sha": null,
+      "attempts_initial": 0,
+      "attempts_after_redesign": 0
+    },
+    {
+      "swu_id": "IAE-SWU-010",
+      "discipline": "I",
+      "req_ids": [
+        "IAE-REQ-16"
+      ],
+      "depends_on": [
+        "IAE-SWU-005",
+        "IAE-SWU-006"
+      ],
+      "allowed_paths": [
+        "adapters/github/**"
+      ],
+      "acceptance": [
+        "Actions 실제 run SHA/jobs과 미실행/오프라인 구분"
+      ],
+      "risk": "MEDIUM",
+      "status": "PLANNED_NOT_READY",
+      "blockers": [
+        "IAE_dev source branch baseline and code-ready dependency inspection"
+      ],
+      "evidence_sha": null,
+      "attempts_initial": 0,
+      "attempts_after_redesign": 0
+    },
+    {
+      "swu_id": "IAE-SWU-011",
+      "discipline": "C/D/S",
+      "req_ids": [
+        "IAE-REQ-17",
+        "IAE-REQ-18"
+      ],
+      "depends_on": [
+        "IAE-SWU-005",
+        "IAE-SWU-009",
+        "IAE-SWU-010"
+      ],
+      "allowed_paths": [
+        "service/evidence/**",
+        "service/approval/**"
+      ],
+      "acceptance": [
+        "P1/P2/독립감사/GO 별도 판정과 누락 근거 HOLD"
+      ],
+      "risk": "HIGH",
+      "status": "PLANNED_NOT_READY",
+      "blockers": [
+        "IAE_dev source branch baseline and code-ready dependency inspection"
+      ],
+      "evidence_sha": null,
+      "attempts_initial": 0,
+      "attempts_after_redesign": 0
+    },
+    {
+      "swu_id": "IAE-SWU-012",
+      "discipline": "D/S",
+      "req_ids": [
+        "IAE-REQ-13"
+      ],
+      "depends_on": [
+        "IAE-SWU-005"
+      ],
+      "allowed_paths": [
+        "design_library/ingest/**"
+      ],
+      "acceptance": [
+        "파일·URL·영상 메타/권리·digest 저장, 무단 전송 차단"
+      ],
+      "risk": "HIGH",
+      "status": "PLANNED_NOT_READY",
+      "blockers": [
+        "IAE_dev source branch baseline and code-ready dependency inspection"
+      ],
+      "evidence_sha": null,
+      "attempts_initial": 0,
+      "attempts_after_redesign": 0
+    },
+    {
+      "swu_id": "IAE-SWU-013",
+      "discipline": "D/U",
+      "req_ids": [
+        "IAE-REQ-14"
+      ],
+      "depends_on": [
+        "IAE-SWU-012"
+      ],
+      "allowed_paths": [
+        "design_library/select/**",
+        "app/ui/library/**"
+      ],
+      "acceptance": [
+        "16 경량 탐색·선택·프로젝트별 피드백/격리"
+      ],
+      "risk": "MEDIUM",
+      "status": "PLANNED_NOT_READY",
+      "blockers": [
+        "IAE_dev source branch baseline and code-ready dependency inspection"
+      ],
+      "evidence_sha": null,
+      "attempts_initial": 0,
+      "attempts_after_redesign": 0
+    },
+    {
+      "swu_id": "IAE-SWU-014",
+      "discipline": "I/U",
+      "req_ids": [
+        "IAE-REQ-12"
+      ],
+      "depends_on": [
+        "IAE-SWU-006",
+        "IAE-SWU-013"
+      ],
+      "allowed_paths": [
+        "adapters/ffax/**",
+        "app/ui/design/**"
+      ],
+      "acceptance": [
+        "선정 bundle→FFAX 실제 caller/React 결과·캡처/거부 전파"
+      ],
+      "risk": "MEDIUM",
+      "status": "PLANNED_NOT_READY",
+      "blockers": [
+        "IAE_dev source branch baseline and code-ready dependency inspection"
+      ],
+      "evidence_sha": null,
+      "attempts_initial": 0,
+      "attempts_after_redesign": 0
+    },
+    {
+      "swu_id": "IAE-SWU-015",
+      "discipline": "I/S",
+      "req_ids": [
+        "IAE-REQ-20"
+      ],
+      "depends_on": [
+        "IAE-SWU-006",
+        "IAE-SWU-007",
+        "IAE-SWU-005"
+      ],
+      "allowed_paths": [
+        "adapters/axzero/**"
+      ],
+      "acceptance": [
+        "optional AXZERO pinned contract; OFF 비차단, NO_AI도 F18 우회 불가"
+      ],
+      "risk": "HIGH",
+      "status": "PLANNED_NOT_READY",
+      "blockers": [
+        "IAE_dev source branch baseline and code-ready dependency inspection"
+      ],
+      "evidence_sha": null,
+      "attempts_initial": 0,
+      "attempts_after_redesign": 0
+    },
+    {
+      "swu_id": "IAE-SWU-016",
+      "discipline": "I",
+      "req_ids": [
+        "IAE-REQ-21"
+      ],
+      "depends_on": [
+        "IAE-SWU-006",
+        "IAE-SWU-007"
+      ],
+      "allowed_paths": [
+        "adapters/eai/**"
+      ],
+      "acceptance": [
+        "opt-in adviser, OFF/오류 동일 기본 결과"
+      ],
+      "risk": "MEDIUM",
+      "status": "PLANNED_NOT_READY",
+      "blockers": [
+        "IAE_dev source branch baseline and code-ready dependency inspection"
+      ],
+      "evidence_sha": null,
+      "attempts_initial": 0,
+      "attempts_after_redesign": 0
+    },
+    {
+      "swu_id": "IAE-SWU-017",
+      "discipline": "I",
+      "req_ids": [
+        "IAE-REQ-22"
+      ],
+      "depends_on": [
+        "IAE-SWU-002",
+        "IAE-SWU-006"
+      ],
+      "allowed_paths": [
+        "adapters/haechong/**"
+      ],
+      "acceptance": [
+        "해총 상태·SHA read-only 비교, 외부 운영 수정 0"
+      ],
+      "risk": "MEDIUM",
+      "status": "PLANNED_NOT_READY",
+      "blockers": [
+        "IAE_dev source branch baseline and code-ready dependency inspection"
+      ],
+      "evidence_sha": null,
+      "attempts_initial": 0,
+      "attempts_after_redesign": 0
+    },
+    {
+      "swu_id": "IAE-SWU-018",
+      "discipline": "S",
+      "req_ids": [
+        "IAE-REQ-27",
+        "IAE-REQ-19"
+      ],
+      "depends_on": [
+        "IAE-SWU-003",
+        "IAE-SWU-006",
+        "IAE-SWU-008"
+      ],
+      "allowed_paths": [
+        "service/security/**",
+        "tests/security/**"
+      ],
+      "acceptance": [
+        "path/Host/Origin/CSRF/비밀·권한/원본 공격 fail-closed"
+      ],
+      "risk": "HIGH",
+      "status": "PLANNED_NOT_READY",
+      "blockers": [
+        "IAE_dev source branch baseline and code-ready dependency inspection"
+      ],
+      "evidence_sha": null,
+      "attempts_initial": 0,
+      "attempts_after_redesign": 0
+    },
+    {
+      "swu_id": "IAE-SWU-019",
+      "discipline": "D/C",
+      "req_ids": [
+        "IAE-REQ-25",
+        "IAE-REQ-26"
+      ],
+      "depends_on": [
+        "IAE-SWU-004",
+        "IAE-SWU-005"
+      ],
+      "allowed_paths": [
+        "service/storage/**",
+        "service/metrics/**"
+      ],
+      "acceptance": [
+        "중단/재개/원자 복구·CPU/RAM·모델 호출 실측, 중복 없음"
+      ],
+      "risk": "MEDIUM",
+      "status": "PLANNED_NOT_READY",
+      "blockers": [
+        "IAE_dev source branch baseline and code-ready dependency inspection"
+      ],
+      "evidence_sha": null,
+      "attempts_initial": 0,
+      "attempts_after_redesign": 0
+    },
+    {
+      "swu_id": "IAE-SWU-020",
+      "discipline": "U",
+      "req_ids": [
+        "IAE-REQ-23"
+      ],
+      "depends_on": [
+        "IAE-SWU-003",
+        "IAE-SWU-011",
+        "IAE-SWU-013",
+        "IAE-SWU-014",
+        "IAE-SWU-017",
+        "IAE-SWU-019"
+      ],
+      "allowed_paths": [
+        "app/ui/**"
+      ],
+      "acceptance": [
+        "다중 페이지 실제 호출/차단·SHA·한국어/키보드 경로 연결"
+      ],
+      "risk": "MEDIUM",
+      "status": "PLANNED_NOT_READY",
+      "blockers": [
+        "IAE_dev source branch baseline and code-ready dependency inspection"
+      ],
+      "evidence_sha": null,
+      "attempts_initial": 0,
+      "attempts_after_redesign": 0
+    },
+    {
+      "swu_id": "IAE-SWU-021",
+      "discipline": "U/I",
+      "req_ids": [
+        "IAE-REQ-24"
+      ],
+      "depends_on": [
+        "IAE-SWU-018",
+        "IAE-SWU-019",
+        "IAE-SWU-020"
+      ],
+      "allowed_paths": [
+        "app/desktop/**",
+        "packaging/**"
+      ],
+      "acceptance": [
+        "셸 선택 실측·Win 실행/시작·중지·오프라인 패키징 코드"
+      ],
+      "risk": "MEDIUM",
+      "status": "PLANNED_NOT_READY",
+      "blockers": [
+        "IAE_dev source branch baseline and code-ready dependency inspection"
+      ],
+      "evidence_sha": null,
+      "attempts_initial": 0,
+      "attempts_after_redesign": 0
+    },
+    {
+      "swu_id": "IAE-SWU-022",
+      "discipline": "C/I/D/U",
+      "req_ids": [
+        "IAE-REQ-01",
+        "IAE-REQ-02",
+        "IAE-REQ-03",
+        "IAE-REQ-04",
+        "IAE-REQ-05",
+        "IAE-REQ-06",
+        "IAE-REQ-07",
+        "IAE-REQ-08",
+        "IAE-REQ-09",
+        "IAE-REQ-10",
+        "IAE-REQ-11",
+        "IAE-REQ-12",
+        "IAE-REQ-13",
+        "IAE-REQ-14",
+        "IAE-REQ-15",
+        "IAE-REQ-16",
+        "IAE-REQ-17",
+        "IAE-REQ-18",
+        "IAE-REQ-19",
+        "IAE-REQ-20",
+        "IAE-REQ-21",
+        "IAE-REQ-22",
+        "IAE-REQ-23",
+        "IAE-REQ-24",
+        "IAE-REQ-25",
+        "IAE-REQ-26",
+        "IAE-REQ-27",
+        "IAE-REQ-28"
+      ],
+      "depends_on": [
+        "IAE-SWU-008",
+        "IAE-SWU-011",
+        "IAE-SWU-014",
+        "IAE-SWU-018",
+        "IAE-SWU-020"
+      ],
+      "allowed_paths": [
+        "service/integration/**",
+        "tests/integration/**"
+      ],
+      "acceptance": [
+        "실제 1 프로젝트에서 설계→MLA 후보→FFAX FE→REQ/Actions 증거→UI, optional OFF 경로; 거짓 PASS 없이 끝까지"
+      ],
+      "risk": "MEDIUM",
+      "status": "PLANNED_NOT_READY",
+      "blockers": [
+        "IAE_dev source branch baseline and code-ready dependency inspection"
+      ],
+      "evidence_sha": null,
+      "attempts_initial": 0,
+      "attempts_after_redesign": 0
+    }
+  ]
+}

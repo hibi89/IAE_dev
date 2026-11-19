@@ -1,0 +1,18 @@
+{
+  "schema": "iae-dev-branch-setup-v1",
+  "created_kst": "2026-11-19",
+  "repo": "hibi89/IAE_dev",
+  "main": "main",
+  "design": "design/iae-dev-final-v1",
+  "p1": "dev/iae-dev-p1-20261119",
+  "integration": "integration/iae-dev-e2e-20261119",
+  "p2": "verify/iae-dev-p2-20261119",
+  "features": [
+    "feature/iae-design-intelligence-20261119",
+    "feature/iae-axzero-adapter-20261119"
+  ],
+  "branch_creations_do_not_imply_code": true,
+  "main_merge_requires_owner_go": true,
+  "same_ref_concurrent_writes_forbidden": true,
+  "production_requires_owner_go": true
+}
