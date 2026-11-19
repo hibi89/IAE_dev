@@ -1,7 +1,7 @@
 # IAE_dev — P1 REQ·SWU 구현·P2 수용 계획 v1.0
 
 > 2026-11-19 KST · **IAE_dev 신규 프로그램 전용 계획/설계 기준선**. 상위: [IAE_dev 통합 최종설계](IAE_DEV_FINAL_BLUEPRINT_V1_20261119.md).  
-> **현재:** 전용 repo/코드 미생성, 아래 모든 ID는 계획 수용조건. 구현·검증 **NOT_RUN**, 공식률 **UNASSESSED**, 출시 HOLD. 문서 28 REQ/22 SWU/9 P2 게이트는 **타 제품 분모에 합산하거나 완료로 인정하지 않음**. 개발 repo 출범 시 동일 ID·기능 범위·계약을 이식하고 SHA·실제 코드 증거로 상태 재산정.  
+> **현재:** 전용 공개 repo·P0 브랜치·초기 큐 생성 완료 / 실제 앱 소스 코드 미생성, 아래 모든 ID는 계획 수용조건. 구현·검증 **NOT_RUN**, 공식률 **UNASSESSED**, 출시 HOLD. 문서 28 REQ/22 SWU/9 P2 게이트는 **타 제품 분모에 합산하거나 완료로 인정하지 않음**. 개발 repo 출범 시 동일 ID·기능 범위·계약을 이식하고 SHA·실제 코드 증거로 상태 재산정.  
 > **원칙:** 현행 중앙 `AGENTS.md`, `OWNER_DEV_EXECUTION_CANONICAL_20261116.md` `0J, `GPT6_HIGH_STANDARD_WORK_UNIT_20261117.md` `0E, 원본 제품별 AGENTS·최종설계가 우선. 신규 계획이 MLA/FFAX/REQ/AXZERO/EAI의 기존 SWU·안전·상품 범위를 변경하지 않는다.
 
 ## 0. 단계 잠금과 수치
@@ -142,7 +142,7 @@ flowchart TD
 
 ## 6. 작업자용 재개·인계 계약
 
-1. 해총 최신 원격 HEAD/`AGENTS`, 본 정본과 기존 목표문서 대조. 실제 신규 IAE_dev repo를 만들기 전에는 **설계만**; repo를 승인된 위치에 생성 후 `repo/branch/SHA`와 `AGENTS/HANDOFF/STATUS/REQUIREMENTS/P1·P2 JSON 원장` 초기화.
+1. 해총 최신 원격 HEAD/`AGENTS`, 본 정본과 기존 목표문서 대조. 신규 `hibi89/IAE_dev` repo와 설계/코딩/검증 브랜치 및 `AGENTS/HANDOFF/STATUS/REQUIREMENTS/P1·P2 JSON 원장` 초기화 완료. 앱 실제 소스 코드는 아직 미구현이며, 다음 `ㄱ`에서는 `dev` 브랜치 최신 HEAD/안전·실제 READY 확인 후 코딩.
 2. 시작 wave에서 현재 HEAD, ID/S-C-I-D-U, `depends_on`, `allowed_paths`, 실제 READY, 승인·신뢰 차단 및 기존 제품 상태를 재판정한다. 계획 `PLANNED_NOT_READY`를 CODE_READY라 부르지 않는다.
 3. 실제 수직 기능·정상 및 핵심 오류 경로→필수 국소 문법·타입·스모크·고위험 안전 검사→GitHub 고유 소스 SHA 기록. 매번 모든 P2 CI를 수동 폴링하지 않는다.
 4. 실패 초기 2회→`ISOLATED_REDESIGN_PENDING`, 대안 2회→`SOLMAX_BATCH_PENDING`. 고위험 신뢰 과제는 코드와 원인 검토 후 즉시 전문 지원 요청 가능. Sol Max 실제 모델 가용성 미확인 시 `MODEL_UNVERIFIED`; Code/Work 실행 표면 구분.
