@@ -9,3 +9,8 @@
 7. **처리/보고:** SWU/REQ 완료 실제 수/분모, 구현률과 검증률 각각, SHA, 실제 PASS/FAIL/SKIP/NOT_RUN, 막힘·승인·다음 READY, KST, 소스·정본 SHA. 기계 큐·STATUS·HANDOFF를 함께 갱신.
 8. **최소 첫 수직 기능:** 프로젝트 1개 선택→HEAD/설계 확인→scope 명령 preview→MLA 실제 작업 상태/후보→REQ/Actions 정확 SHA 근거 조회→UI에 차단/검증을 구분하여 표시. 선택형 AXZERO/EAI OFF 상태에서도 작동.
 9. **비용/보호:** 무료 로컬/사용자 PC 개입 최소화, 비밀·고객 자료 외부 전송/관리자 권한·실행 코드·Production은 별도 GO. 실행 신뢰 경계 없으면 HOLD.
+
+## 2026-11-20 Provider Router 실제 구현 선행
+- 제품 분모 변경 없이 기존 IAE-SWU-006/007/018/019/020의 allowed_paths·수용조건에 provider 연결·MLA F18·egress policy·quota ledger·UI를 적용. P2-05/06/09 실제 회귀 추가.
+- 분리 기능 브랜치 `feature/iae-provider-router-20261120`. 주 변경 경로 `adapters/external_ai/**`, `service/approval/**`, `service/storage/**`, `service/metrics/**`, `app/ui/providers/**`, `tests/security/**`. 동일 공통 파일 충돌 시 dev에서 단일 통합자가 해결.
+- 데이터와 승인·실무료 계정/실 API 모델 ID 미확정 상태에서는 mock/synthetic만, 라이브 호출 OFF. Flash 429→Hydrogen 자동 승격 금지. 본 작업은 docs-only; 구현 진척 0.
