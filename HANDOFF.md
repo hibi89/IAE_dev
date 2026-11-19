@@ -1,7 +1,7 @@
 # HANDOFF — IAE_dev P0 설계/브랜치 기준선 (2026-11-19 KST)
 
 1. **목적/임무:** Windows 11 GTX1050Ti/16GB 개인용 단일 IAE_dev 작업대. 기존 MLA·FFAX·REQ/Actions+해총 연결, Design Intelligence 신규; AXZERO/EAI/AXNODE 선택형. 실제 개발 엔진은 중복 구현하지 않는다.
-2. **설계 정본:** `design/iae-dev-final-v1:docs/strategy/IAE_DEV_FINAL_BLUEPRINT_V1_20261119.md` 및 `...IMPLEMENTATION_AND_ACCEPTANCE_V1_20261119.md`. 중앙 исход은 `hibi89/hackathon-command-center-2026@kmong-productization` HEAD `313e1b6cdb5b0dfa2a11b323d347d84db08a1467`.
+2. **설계 정본:** `design/iae-dev-final-v1:docs/strategy/IAE_DEV_FINAL_BLUEPRINT_V1_20261119.md` 및 `...IMPLEMENTATION_AND_ACCEPTANCE_V1_20261119.md`. 중앙 원본은 `hibi89/hackathon-command-center-2026@kmong-productization` HEAD `313e1b6cdb5b0dfa2a11b323d347d84db08a1467`.
 3. **실제 상태:** 신규 IAE_dev 앱 소스 미작성, P1 `0/22` 후보·28 REQ 구현 0개, P2 `0/9` NOT_RUN/LOCKED, 공식 가중률 UNASSESSED, P3/P4/P5 NOT_RUN/HOLD. 새 브랜치·문서 = 코드 구현 아님.
 4. **원본/엔진:** `docs/ENGINE_CATALOG.md`·`data/ENGINE_REGISTRY.json`의 각 repo/branch/관측 SHA 확인 후 작업마다 최신 HEAD 재조회; 타 제품의 P2 통과를 추정하지 말 것.
 5. **선행/READY:** `P1_SWU_TASK_QUEUE.json` 전체 `PLANNED_NOT_READY`. 개발 브랜치 원격 HEAD/허용 경로·정본 일치·승인 재평가 후 `IAE-SWU-001`(프로젝트 선택), 다음 `002`(정확 SHA·설계 로드), `005`(증거 원장), `006`(adapter registry); 의존성 순서와 실제 코드 충돌 확인.
